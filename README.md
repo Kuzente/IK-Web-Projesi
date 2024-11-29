@@ -84,8 +84,6 @@ Bu Dashboard, tüm şirket verilerinin tek bir yerden yönetilmesini ve analiz e
    - **Geçmişe Dönük İşe Giriş:** İşe giriş tarihi olarak geçmiş bir tarih girildiğinde (örneğin 10 yıl önce), sistem bu tarihe göre gerekli hesaplamaları yapar ve personelin kümülatif tablolarını otomatik olarak oluşturur.
 
 
----
-
 ### Görseller ve Video
 
 #### Aktif Personeller Listesi
@@ -105,6 +103,85 @@ https://github.com/user-attachments/assets/d2d7c729-63fe-4cad-bd3e-5e3d3e7b0b71
 
 Bu alanlar, personel yönetimi süreçlerini optimize etmek için tasarlanmıştır ve kullanıcı dostu bir deneyim sunar.
 
+## Personel Kartları
+
+**Personel Kartları**, her bir çalışan için detaylı veri yönetimi sağlayan kapsamlı bir modüldür. Bu alan, personel bilgilerinin düzenlenmesi ve takibi için kullanıcı dostu ve işlevsel bir tasarıma sahiptir. Modül, dört temel bölümden oluşmaktadır: **Personel Detayları**, **İzinler**, **Eksik Gün**, ve **Görevlendirmeler**.
+
+### 1. Personel Detayları
+
+**Personel Detayları** bölümü, personelin temel ve detaylı bilgilerinin yönetildiği, kullanıcıların ilk karşılaştığı ekrandır. Bu ekran, sezgisel bir tasarım ve kapsamlı bir bilgi yapısı sunar.
+
+#### Üst Bilgi Alanı
+Personelin özet bilgileri, ekranın üst bölümünde yer alır ve aşağıdaki verileri içerir:
+- **Alacak İzin Sayısı:** Personele tanımlı olan alacak izinlerin sayısı (Alacak izinler sistem üzerinde saat bazlı tutulmaktadır. Bu alanda 8 saatlik bir alacak izin 1 güne tekabül etmektedir.).
+- **Gıda Yardımı Miktarı:** Personele sağlanan gıda yardımı tutarı.
+- **Hak Edilen Toplam Yıllık İzin Miktarı:** Personele ait toplam hak edilen yıllık izin gün sayısı.
+- **Kullanılan Toplam Yıllık İzin Miktarı:** Personele ait toplam kullanılan izin toplamı.
+- **Kalan Yıllık İzin Miktarı:** Güncel olarak kullanılabilir yıllık izin sayısı.
+- **Kalan Yıllık İzin Detay Butonu:** Kalan izin miktarının hemen yanında bulunan **Detay** butonuna tıklanıldığında yıllara göre kalan yıllık izin miktarlarını listeleyen bir açılır pencere (tooltip) sunar. Bu özellik, geçmişe dönük yıllık izin yönetimini daha pratik hale getirir.
+
+#### Sekme Yapısı
+Personel Detayları ekranının devamında, bilgilerin düzenlenmesi için bir **Sekme** yapısı bulunmaktadır. Her sekme, farklı bir bilgi grubunu temsil eder:
+
+1. **Kişisel Bilgiler:**  
+   Personel ekleme sürecinde alınan zorunlu bilgilerin görüntülendiği ve düzenlenebildiği alan. Bu bölüm, temel bilgilerin hızlıca erişilebilmesini sağlar.
+
+2. **Diğer Bilgiler:**  
+   Personel ekleme sürecinde alınan isteğe bağlı bilgilerin yer aldığı sekme. Burada adres, iletişim bilgileri ve eğitim durumu gibi detaylar yönetilebilir.
+
+3. **Yıllık İzin Kümülatif Bilgileri:**  
+   Bu sekme, personelin her yıl için hak ettiği ve kalan yıllık izinlerinin ayrıntılı bir listesini sunar. Bölümün detayları:
+   - **Yıllık İzin Bilgileri:** Hak edilen ve kalan yıllık izinler için düzenlenebilir input alanları.
+   - **Kontrol Alanları:**
+     - **"İzin Föyü İmzalandı mı?" Checkbox:** Bu alan, personelin ilgili yıldaki tüm yıllık izinlerini tüketmesi durumunda, izin föyü imzalama sürecinin yönetilmesini kolaylaştırır. İnsan kaynaklarının bu süreci takip etmesini sağlamak amacıyla bir checkbox üzerinden kontrol edilir.
+
+     - **"Bildirim Açık mı?" Checkbox:** Bu checkbox, izin föyü ile ilgili bir hatırlatma sistemini tetikler. Personelin belirli bir yıla ait tüm yıllık izinlerini sıfırlaması durumunda, sistem bu alanı otomatik olarak işaretler ve dashboard ekranına ilgili kümülatif raporun detaylarını ekler. Böylece insan kaynaklarına, ilgili yıl için izin föyü imzalatılması gerektiği hatırlatılır.
+
+     - **Erken Tarihli Yıllık İzin Tanımlama:**  
+  Bu özellik, henüz yıllık izin hak ediş tarihi gelmeyen personeller için esnek bir çözüm sunar. Normal şartlarda, bulunduğumuz yıl için personelin yıllık izin yenilenme tarihi gelmediyse burada ilgili yıla ait bir kümülatif alanı bulunmamaktadır.Bu alan aracılığıyla isteğe bağlı manuel izin tanımlanabilir. Böylece, yıl içerisinde acil ihtiyaçlar doğrultusunda esneklik sağlanır. Manuel olarak tanımlanan yıllık izinler, sistemin otomatik izin yenileme süreçlerinden muaf tutulur böylece personele fazladan yıllık izin verilmesinin önüne geçilir.
+ 
+      
+
+4. **Yıllık İzin, Alacak İzin ve Gıda Yardımı Ayarları:**  
+   - Personele alacak izin ekleme veya çıkarma işlemleri.  
+   - Gıda yardım miktarı ve yenilenme tarihinin düzenlenmesi.  
+   - Yıllık izin yenilenirken, emeklilik durumuna göre yenilenmesi istendiği takdirde bu seçeneğin açılması ile kontrol sağlanabilir. (Bu seçenek seçilmesi halinde personelin yıllık izinleri sabit olarak 20 günden yenilenecektir.)
+
+#### Personel Silme Alanı
+Sayfanın en alt kısmında, ilgili personel kaydının sistemden kaldırılmasını sağlayan bir **Personel Silme** butonu bulunmaktadır. Bu işlem, yetkilendirme gereklilikleri ile kontrol edilir.
+
+### Personel Detayları Video
+
+https://github.com/user-attachments/assets/5d7a8fca-8be8-4bf8-aa5e-636f3401cf66
+
+### 2. Personel Ait İzinler
+**Personele Ait İzinler** bölümü, ilgili personelin geçmişte almış olduğu tüm onaylanmış izinlerin detaylı bir listesini sunar. Bu liste, izin yönetimi ve raporlama süreçlerini kolaylaştırmak için kullanıcı dostu bir yapıda tasarlanmıştır.
+
+#### Özellikler
+
+1. **Onaylanan Tüm İzinlerin Listesi:**  
+   Personele ait tüm geçmiş izinler, liste halinde sunulur. Bu liste, detaylı bilgilere kolayca erişim sağlar.
+
+2. **Excel Dışa Aktarma:**  
+   Kullanıcılar, ihtiyaç duyduklarında izin listesini **Excel formatında** dışa aktarabilir. Bu özellik, raporlama ve arşivleme süreçlerini hızlandırır.
+
+3. **Sayfalama:**  
+   Çok sayıda izin kaydının düzenli bir şekilde görüntülenmesi için liste, sayfalama yapısı ile tutulur.
+
+4. **İzin Satırı Detayları:**  
+   Her bir izin satırı, aşağıdaki bilgileri içerir:
+   - **PDF Butonu:** İzin belgesini PDF formatında görüntüleme ve indirme seçeneği.
+   - **Başlangıç ve Bitiş Tarihleri:** İznin başladığı ve sona erdiği tarih bilgisi.
+   - **Toplam İzin Gün Sayısı:** İzin süresinin toplam gün olarak gösterimi.
+   - **İzin Açıklaması:** İznin amacı veya detaylarını belirten açıklama alanı.
+   - **Detaylı İzin Alanı:** 
+     - Bir buton üzerinden erişilir ve hover yapıldığında iznin hangi izin türünden kaç gün verildiği bilgisi gösterilir.
+   - **Onaylanma Tarihi:** İznin onaylandığı tarih bilgisi.
+   - **Güncelle ve İptal Et Butonları:** Kullanıcı, izin kaydını düzenleyebilir veya iptal edebilir.
+
+### Personele Ait İzinler Görsel
 
 
+---
 
+Bu yapı, personel yönetiminde ihtiyaç duyulan tüm süreçleri kapsamlı bir şekilde karşılar. Kullanıcı dostu tasarımı ve esnek düzenleme seçenekleri ile operasyonel süreçlerin hızlandırılmasını ve kolaylaştırılmasını sağlar.
