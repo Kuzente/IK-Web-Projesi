@@ -10,7 +10,7 @@ Bu proje, şirketlerin insan kaynakları süreçlerini dijitalleştirmek ve veri
 - **Otomatik Süreçler:** Yıllık izin hak edişlerinin gece yarısı otomatik olarak hesaplanması ve güncellenmesi.
 - **Dashboard Raporlama:** Cinsiyet ve eğitim durumu dağılım grafikleri, eksik gün raporları ve izin durumlarının görselleştirilmesi.
 - **İki Aşamalı İzin Onayı:** İnsan Kaynakları ve Genel Müdür onayıyla iki aşamalı kontrol süreçleri.
-- **Eksik Gün Takibi:** Eksik günlerin kolay takibi ve raporlanması.
+- **Eksik Gün Takibi:** Eksik günlerin kolay takibi ve raporlanması. 
 - **Görevlendirme Yönetimi:** Personellerin şube ve ünvan değişiklikleri için nakil tarihi bilgileriyle birlikte geçmiş görevlendirmelerin takibi ve raporlanması. 
 
 Bu proje, insan kaynakları süreçlerini daha verimli, şeffaf ve kullanıcı dostu hale getirerek işletmelere önemli ölçüde zaman kazandırır ve süreçleri sadeleştirir.
